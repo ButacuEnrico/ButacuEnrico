@@ -113,7 +113,7 @@ def build():
     cam_data.dof.aperture_fstop = 5.6
     cam = bpy.data.objects.new("cam", cam_data)
     cam.parent = rig
-    cam.location = (0, -47, 31)
+    cam.location = (0, -42, 28)
     cam.rotation_euler = (Vector((0, 0, 0.4)) - Vector(cam.location)).to_track_quat("-Z", "Y").to_euler()
     cam_data.dof.focus_distance = (Vector(cam.location) - Vector((0, 0, 0.4))).length
     bpy.context.collection.objects.link(cam)
@@ -131,6 +131,7 @@ def build():
     scene.render.resolution_x, scene.render.resolution_y = 880, 440
     scene.render.resolution_percentage = int(ARGS[4]) if len(ARGS) > 4 else 100
     scene.render.image_settings.file_format = "PNG"
+    scene.render.image_settings.color_mode = "RGB"  # no alpha: it smears lossy WebP frames
     scene.view_settings.view_transform = "AgX"
     scene.view_settings.look = "AgX - Medium High Contrast"
     return scene, rig

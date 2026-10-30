@@ -15,4 +15,6 @@
 <a href="https://github.com/ButacuEnrico/Lares.it"><picture><source media="(prefers-color-scheme: light)" srcset="./repo-2-light.svg" /><img src="./repo-2.svg" width="49%" alt="Lares.it" /></picture></a>
 <!-- repos:end -->
 
+<img src="./turntable.webp" width="100%" alt="The same year of AI work, built and rendered in Blender" />
+
 </div>
